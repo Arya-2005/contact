@@ -13,7 +13,7 @@ body {
 }
 
 /* Navbar Styling */
-.navbar {
+.nav-links {
     display: flex;
     justify-content: center;
     background-color: #333;
@@ -70,7 +70,7 @@ body {
 }
 
 /* Footer Social Icons */
-.footer {
+.social-icons {
     display: flex;
     justify-content: center;
     gap: 15px;
