@@ -16,6 +16,6 @@ document.querySelectorAll('.zoom-effect').forEach(img => {
 // Add WhatsApp floating button functionality
 document.addEventListener("DOMContentLoaded", function () {
     let whatsappButton = document.createElement("div");
-    whatsappButton.innerHTML = '<a href="https://wa.me/1234567890" target="_blank"><img src="whatsapp-logo.png" alt="WhatsApp" style="width:60px;height:60px;position:fixed;bottom:20px;right:20px;cursor:pointer;"></a>';
+    whatsappButton.innerHTML = '<a href="https://wa.me/1234567890" target="_blank"><img src="images/whatsapp-logo.png" alt="WhatsApp" style="width:60px;height:60px;position:fixed;bottom:20px;right:20px;cursor:pointer;"></a>';
     document.body.appendChild(whatsappButton);
 });
