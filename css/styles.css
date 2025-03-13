@@ -1,102 +1,103 @@
 /* General Page Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f9f9f9;
 }
-.contact-section {
-    display: flex;
-    justify-content: space-around;
-}
-/* Increase page height for scrolling effect */
+
+/* Container for Contact Section */
 .container {
-    min-height: 120vh;
-    padding-bottom: 50px;
-}
-
-/* Navbar Styling */
-.nav-links {
     display: flex;
-    justify-content: center;
-    background-color: #333;
-    padding: 15px 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Ensures content wraps on smaller screens */
+    padding: 40px;
 }
 
-.navbar a {
-    color: white;
-    text-decoration: none;
-    padding: 14px 20px;
-    font-size: 18px;
+/* Contact Details & Image Alignment */
+.contact-image {
+    flex: 1;
+    padding: 20px;
 }
 
-.navbar a:hover {
-    background-color: #555;
-    transition: 0.3s ease-in-out;
+.contact-image img {
+    width: 100%;
+    border-radius: 10px;
 }
 
-/* Section Dividers */
-.section {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    padding: 40px 20px;
-}
-
-/* Contact Section */
-.contact-info {
-    text-align: center;
-    font-size: 18px;
-    color: #333;
-    margin-bottom: 40px;
-}
-
-.contact-info h2 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 15px;
+.contact-details {
+    flex: 1;
+    padding: 20px;
+    max-width: 400px;
 }
 
 /* Map Section */
 .map-container {
     display: flex;
     justify-content: center;
-    width: 100%;
-    height: 400px;
+    padding: 20px 0;
 }
 
 .map-container iframe {
-    width: 100%;
-    height: 100%;
+    width: 100%; /* Full width for better responsiveness */
+    max-width: 400px; /* Prevents the map from becoming too large */
+    height: 300px;
     border-radius: 10px;
 }
 
-/* Footer Social Icons */
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    padding: 20px;
+/* Footer */
+.footer {
+    text-align: center;
     background-color: #222;
+    color: #fff;
+    padding: 20px;
 }
 
-.footer img {
-    width: 40px;
-    height: 40px;
+/* WhatsApp Button */
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.whatsapp-button img {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
     transition: transform 0.3s ease-in-out;
 }
 
-.footer img:hover {
-    transform: scale(1.2);
-}
-
-/* Button and Image Hover Effects */
-button, .zoom-effect {
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-button:hover, .zoom-effect:hover {
+.whatsapp-button img:hover {
     transform: scale(1.1);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack image and text vertically */
+        padding: 20px;
+    }
+
+    .contact-details,
+    .contact-image {
+        max-width: 100%; /* Full width for smaller screens */
+    }
+
+    .map-container iframe {
+        width: 100%;
+        max-width: none;
+        height: 250px;
+    }
+
+    .footer {
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    .whatsapp-button img {
+        width: 50px;
+        height: 50px;
+    }
 }
